@@ -1,0 +1,85 @@
+@import '../../../assets/variable.scss';
+
+.bg_wrapper {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(10, 1fr);
+	grid-gap: 1pt;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: $lines-color-dark;
+
+	.grid_item {
+		background-color: $bg-color-dark;
+		width: auto;
+		height: 100%;
+		background-size: 200% 200%;
+		background-image: 
+		linear-gradient(to top, $bg-color-light 50%, transparent 50%);
+		@include paint_color(300ms);
+	}
+	.open_0 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(150ms);
+	}
+	.open_1 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(100ms);
+	}
+	.open_2 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(200ms);
+	}
+	.open_3 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(300ms);
+	}
+	.open_4 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(400ms);
+	}
+	.open_5 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(500ms);
+	}
+	.open_6 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(600ms);
+	}
+	.open_7 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(700ms);
+	}
+	.open_8 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(800ms);
+	}
+	.open_9 {
+		background-image: 
+		linear-gradient(to top, $bg-color-light 51%, transparent 50%);
+		background-position: 0 100%;
+		@include paint_color(900ms);
+	}
+}
+.invert {
+	background-color: $lines-color-light;
+}

@@ -1,0 +1,15 @@
+$max-screen-width: 1900px;
+
+$bg-color-light: #F2EBE6;
+$bg-color-dark: #150f0a;
+$primary-color: #000;
+$lines-color-dark: #403c3b;
+$lines-color-light: #ccc8c8;
+
+@mixin paint_color($timing) {
+	-webkit-transition: background-position $timing, color $timing ease, border-color $timing ease;
+	-moz-transition: background-position $timing, color $timing ease, border-color $timing ease;
+	-ms-transition: background-position $timing, color $timing ease, border-color $timing ease;
+	-o-transition: background-position $timing, color $timing ease, border-color $timing ease;
+	transition: background-position $timing, color $timing ease, border-color $timing ease;
+}
