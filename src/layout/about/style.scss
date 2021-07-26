@@ -1,0 +1,61 @@
+@import '../../assets/variable.scss';
+
+.about {
+	.title {
+		font-family: 'moteserrat-bold';
+		font-size: 2em;
+		margin-top: 4em;
+	}
+	.row {
+		display: flex;
+		flex-direction: row;
+
+		.col {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+	
+			.about_desc {
+				font-family: 'moteserrat-light';
+				line-height: 1.5em;
+			}
+			.tech_grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr 1fr 1fr;
+	
+				&_item {
+					display: flex;
+					flex-direction: row;
+					margin: 0.5em;
+					align-items: center;
+	
+					&_point {
+						height: 5px;
+						width: 5px;
+						background-color: $bg-color-light;
+						margin-right: 1em;
+					}
+	
+				}
+			}
+			.img_bg {
+				width: 29em;
+				height: 25em;
+				border: 1px solid $bg-color-light;
+				margin-top: 2em;
+				margin-left: 5em;
+				background-color: transparent;
+				position: absolute;
+				z-index: 1;
+			}
+			.picture {
+				width: 29em;
+				height: 25em;
+				align-self: center;
+				align-items: center;
+				z-index: 2;
+			}
+		}
+	}
+}

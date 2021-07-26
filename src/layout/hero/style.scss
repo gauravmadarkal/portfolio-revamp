@@ -1,0 +1,71 @@
+@import '../../assets/variable.scss';
+
+.hero {
+	z-index: 5;
+	.title {
+		font-size: 3em;
+		font-weight: 600;
+		font-family: 'moteserrat-bold';
+	}
+	.desc {
+		font-size: 1em;
+		line-height: 2em;
+		font-family: 'moteserrat-light';
+		max-width: 2 * $content-margin;
+	}
+	.cards {
+		margin-left: 3 * $content-margin;
+		.card {
+			background-color: $bg-color-light;
+			// width: 2 */ $content-margin;
+			padding: 20px;
+			margin-bottom: 10px;
+			margin-left: 2px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			z-index: 8;
+			.content {
+				color: $bg-color-dark;
+				display: flex;
+				flex-direction: column;
+				padding: 0;
+				margin: 0;
+				span {
+					// text-align: right;
+					margin: 0;
+					margin-bottom: 0.5em;
+				}
+				.number {
+					font-family: 'moteserrat-bold';
+					font-size: 2.5em;
+				}
+				.text {
+					font-size: 1.5em;
+				}
+			}
+			.more_info {
+				width: 4em;
+				height: 4em;
+				border-radius: 2em;
+				background-color: $bg-color-dark;
+				position: absolute;
+				right: 0;
+				margin-right: 1em;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				@include button_effect;
+
+				.arrow {
+					width: 2em;
+					height: 2em;
+				}
+				&:hover {
+					background-color: $button-hover;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

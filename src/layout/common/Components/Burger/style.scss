@@ -4,9 +4,9 @@
 	width: 60px;
 	height: 45px;
 	position: absolute;
-	right: 0;
+	right: $content-margin;
 	top: 0;
-	margin: 40px;
+	margin: 40px 0;
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-o-transform: rotate(0deg);
@@ -16,6 +16,7 @@
 	-o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 	cursor: pointer;
+	z-index: 10;
 }
 
 #nav-icon span{

@@ -1,0 +1,11 @@
+@import '../../assets/variable.scss';
+
+.content {
+	position: relative;
+	margin: 0 $content-margin;
+	padding: 10% 0;
+	padding-bottom: 0;
+	font-family: 'moteserrat';
+	color: $text-color;
+	z-index: 5;
+}

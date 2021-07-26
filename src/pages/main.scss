@@ -1,12 +1,13 @@
-
+@import '../assets/variable.scss';
+@import '../assets/typography.css';
 
 h1 {
-	color: blue;
+	color: white;
 }
 html {
 	background-color: var(--bg-color-dark);
 }
-body{
+body {
 	max-width: var(--max-screen-width);
 	margin: 0 auto;
 }

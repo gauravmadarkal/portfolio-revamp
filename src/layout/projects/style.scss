@@ -1,0 +1,54 @@
+@import '../../assets/variable.scss';
+
+.projects {
+	.title {
+		font-family: 'moteserrat-bold';
+		font-size: 2em;
+		margin-top: 4em;
+	}
+	.row {
+		display: flex;
+		flex-direction: row;
+
+		.col {
+			width: 50%;
+			max-height: 20em;
+			display: flex;
+			flex-direction: column;
+			// padding-left: 2em;
+
+			.project_title {
+				font-family: 'moteserrat-bold';
+				font-size: 1.5em;
+				color: $bg-color-dark;
+				margin: 20px;
+			}
+			.project_desc {
+				font-family: 'moteserrat-light';
+				color: $bg-color-dark;
+				margin: 10px 20px;
+			}
+			.moreinfo {
+				margin: 5px 20px;
+			}
+		}
+		.bg-y {
+			background-color: $button-hover;
+		}
+		.bg-l {
+			background-color: white;
+			justify-items: center;
+			align-items: center;
+			object-fit: cover;
+			padding: 0;
+
+			.tech_icon {
+				width: 20em;
+				height: 20em;
+			}
+			.inc_size {
+				width: 30em;
+			}
+		}
+	}
+}

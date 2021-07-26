@@ -1,10 +1,19 @@
 $max-screen-width: 1900px;
 
-$bg-color-light: #F2EBE6;
-$bg-color-dark: #150f0a;
+// $bg-color-light: #F2EBE6;
+$bg-color-light: #E6E6E6;
+// $bg-color-dark: #150f0a;
+$bg-color-dark: #212121;
 $primary-color: #000;
+// $lines-color-dark: #403c3b;
 $lines-color-dark: #403c3b;
 $lines-color-light: #ccc8c8;
+$text-color: #ccc8c8;
+// $button-hover: #bf360c;
+$button-hover: #ffe0b2;
+$matt-color: #fff3e0;
+
+$content-margin: 16.6%;
 
 @mixin paint_color($timing) {
 	-webkit-transition: background-position $timing, color $timing ease, border-color $timing ease;
@@ -12,4 +21,9 @@ $lines-color-light: #ccc8c8;
 	-ms-transition: background-position $timing, color $timing ease, border-color $timing ease;
 	-o-transition: background-position $timing, color $timing ease, border-color $timing ease;
 	transition: background-position $timing, color $timing ease, border-color $timing ease;
+	z-index: 9;
+}
+
+@mixin button_effect {
+	transition: background-color 500ms ease-in;
 }
