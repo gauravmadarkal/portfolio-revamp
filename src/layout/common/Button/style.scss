@@ -1,25 +1,43 @@
 @import '../../../assets/variable.scss';
 
-.button {
-	padding: 1em 2em;
-	background-color: $bg-color-light;
-	color: $bg-color-dark;
-	height: min-content;
-	display: inline-flex;
-	font-family: 'moteserrat-bold';
-	width: fit-content;
-	@include button_effect;
-
-	&:hover {
-		background-color: $button-hover;
-		// color: $bg-color-light;
-		cursor: pointer;
+.button_wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	.button {
+		padding: 1em 2em;
+		background-color: $bg-color-light;
+		color: $bg-color-dark;
+		height: min-content;
+		display: inline-flex;
+		font-family: 'moteserrat-bold';
+		width: fit-content;
+		@include button_effect;
+	
+		&:hover {
+			background-color: $button-hover;
+			// color: $bg-color-light;
+			cursor: pointer;
+		}
+		.link_btn {
+			color: $bg-color-dark;
+			text-decoration: none;
+		}
 	}
-}
-.dark {
-	background-color: $bg-color-dark;
-	color: $bg-color-light;
-	&:hover {
-		background-color: $lines-color-dark;
+	.dark {
+		background-color: $bg-color-dark;
+		color: $bg-color-light;
+		&:hover {
+			background-color: $lines-color-dark;
+		}
+		.link_btn {
+			color: $bg-color-light;
+			text-decoration: none;
+		}
+	}
+	span {
+		margin-left: 1em;
+		font-size: 0.8em;
 	}
 }

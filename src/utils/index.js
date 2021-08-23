@@ -6,6 +6,7 @@ import Firebase from '../images/icons/firebase.png';
 import Project1 from '../images/projects/project_1.png';
 import Project2 from '../images/projects/project_2.png';
 import Project3 from '../images/projects/project_3.png';
+import Project4 from '../images/projects/project_4.png';
 
 export const getIcon = (name) => {
 	switch (name) {
@@ -25,5 +26,7 @@ export const getIcon = (name) => {
 			return Project2;
 		case 'project_3':
 			return Project3;
+		case 'project_4':
+			return Project4;
 	}
 }

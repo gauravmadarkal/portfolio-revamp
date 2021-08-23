@@ -3,6 +3,7 @@ import './style.scss';
 import Profile from '../../images/picture.jpg';
 
 const technologies = [
+	'R Programming',
 	'React',
 	'Node Typescript',
 	'DotNet',

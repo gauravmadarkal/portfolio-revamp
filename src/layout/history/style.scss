@@ -1,0 +1,84 @@
+@import '../../assets/variable.scss';
+.history {
+    .title {
+		font-family: 'moteserrat-bold';
+		font-size: 2em;
+		margin-top: 4em;
+	}
+    .history_content {
+        display: flex;
+        flex-direction: row;
+        // height: 25em;
+        .index_inc {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            justify-content: center;
+    
+            .box {
+                width: 2em;
+                height: 2em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $lines-color-dark;
+                margin: 10px;
+                margin-left: 0;
+                @include button_effect;
+    
+                .inc_icon {
+                    width: 1em;
+                    height: 1em;
+                    transform: rotate(90deg);
+                }
+                .inv {
+                    transform: rotate(270deg);
+                }
+                &:hover {
+                    background-color: $bg-color-dark;
+                }
+            }
+            .disabled {
+                opacity: 0.1;
+                pointer-events: none;
+            }
+        }
+        .duration {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2rem;
+            justify-content: center;
+            align-items: center;
+            p {
+                flex: 1;
+                text-align: center;
+                margin: 0;
+            }
+            .divider {
+                display: flex;
+                min-height: 1em;
+                height: auto;
+                width: 1px;
+                background-color: $plain-white;
+                flex: 5;
+                margin: 1em;
+            }
+        }
+        .details {
+            margin-left: 2rem;
+            .position {
+                font-weight: bold;
+                font-size: 1.5em;
+                margin: 0;
+            }
+            .loc {
+                font-style: italic;
+                font-weight: 1.2em;
+                margin-top: 0;
+            }
+            .desc {
+                font-family: 'moteserrat-light';
+            }
+        }
+    }
+}

@@ -4,6 +4,8 @@ import Hero from "../hero";
 import GlobalContext from '../../context/GlobalContext';
 import About from '../about';
 import Projects from '../projects';
+import History from '../history';
+import Footer from '../footer';
 
 const PageLayout = () => {
 	const {
@@ -15,6 +17,8 @@ const PageLayout = () => {
 			<Hero />
 			<About />
 			<Projects />
+			<History />
+			<Footer />
 		</div>
 	);
 };

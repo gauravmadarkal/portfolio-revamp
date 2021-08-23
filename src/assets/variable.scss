@@ -14,6 +14,7 @@ $button-hover: #ffe0b2;
 $matt-color: #fff3e0;
 
 $content-margin: 16.6%;
+$plain-white: #fff;
 
 @mixin paint_color($timing) {
 	-webkit-transition: background-position $timing, color $timing ease, border-color $timing ease;

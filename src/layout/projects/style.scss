@@ -12,7 +12,7 @@
 
 		.col {
 			width: 50%;
-			max-height: 20em;
+			max-height: 25em;
 			display: flex;
 			flex-direction: column;
 			// padding-left: 2em;
@@ -25,6 +25,7 @@
 			}
 			.project_desc {
 				font-family: 'moteserrat-light';
+				font-size: 0.9em;
 				color: $bg-color-dark;
 				margin: 10px 20px;
 			}
@@ -49,6 +50,38 @@
 			.inc_size {
 				width: 30em;
 			}
+		}
+	}
+	.index_inc {
+		display: flex;
+		flex-direction: row;
+		align-self: center;
+		justify-content: center;
+
+		.box {
+			width: 2em;
+			height: 2em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $lines-color-dark;
+			margin: 10px;
+			@include button_effect;
+
+			.inc_icon {
+				width: 1em;
+				height: 1em;
+			}
+			.inv {
+				transform: rotate(180deg);
+			}
+			&:hover {
+				background-color: $bg-color-dark;
+			}
+		}
+		.disabled_box {
+			pointer-events: none;
+			opacity: 0.1;
 		}
 	}
 }

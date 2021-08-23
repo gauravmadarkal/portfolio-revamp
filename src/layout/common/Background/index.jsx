@@ -1,6 +1,4 @@
-import React, { useContext } from 'react';
-import Burger from '../Components/Burger';
-import Logo from '../../../images/logo.png';
+import React, { useContext, useEffect } from 'react';
 import './style.scss';
 import GlobalContext from '../../../context/GlobalContext';
 
@@ -15,9 +13,9 @@ const Background = () => {
 	const {
 		menuState
 	} = useContext(GlobalContext);
-	const [, setMenuOpen] = menuState;
+	const [isOpen, ] = menuState;
 
-	const openHandler = (isOpen) => {
+	useEffect(() => {
 		const bg = document.querySelector('.bg_wrapper');
 		const ele = document.querySelectorAll('.grid_item');
 		if (isOpen) {
@@ -25,21 +23,17 @@ const Background = () => {
 			ele?.forEach((e, index) => {
 				e?.classList.add(`open_${index}`)
 			});
-			setMenuOpen(true);
 		} else {
 			bg.classList.remove('invert')
 			ele?.forEach((e, index) => {
 				e?.classList.remove(`open_${index}`)
 			});
-			setMenuOpen(false);
 		}
-	};
+	}, [isOpen])
 
 	return (
 		<div className='bg_wrapper'>
 			{BGLines()}
-			<img src={Logo} className='logo' />
-			<Burger openHandler={openHandler}/>
 		</div>
 	)
 };
