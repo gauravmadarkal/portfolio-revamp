@@ -1,12 +1,8 @@
-import React, { useContext } from 'react';
-import GlobalContext from '../../context/GlobalContext';
+import React from 'react';
 import Button from '../common/Button';
-import style from './style.scss';
+import './style.scss';
 
 const Footer = () => {
-    const {
-        toastState
-    } = useContext(GlobalContext);
 
     const onClick = () => {
         navigator.clipboard.writeText('gauravmadarkal@gmail.com');

@@ -23,7 +23,7 @@ const Hero = () => (
 					</span>
 				</div>
 				<div className='more_info'>
-					<img src={Arrow} className='arrow' />
+					<img src={Arrow} className='arrow' alt='arrow' />
 				</div>
 			</div>
 
@@ -37,7 +37,7 @@ const Hero = () => (
 					</span>
 				</div>
 				<div className='more_info'>
-					<img src={Arrow} className='arrow' />
+					<img src={Arrow} className='arrow' alt='arrow' />
 				</div>
 			</div>
 		</div>

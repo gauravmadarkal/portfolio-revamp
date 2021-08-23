@@ -11,9 +11,11 @@ const technologies = [
 	'Android',
 	'React Native'
 ]
-const About = () => {
+const About = ({
+	ref
+}) => {
 	return (
-		<div className='about'>
+		<div className='about' id='about' ref={ref}>
 			<p className='title'>About Me</p>
 			<div className='row'>
 				<div className='col'>

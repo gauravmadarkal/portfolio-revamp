@@ -1,0 +1,16 @@
+@import '../../assets/variable.scss';
+
+.menu {
+    z-index: 100;
+    color: $bg-color-dark;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    p {
+        color: $bg-color-dark;
+    }
+}
+.hide {
+    display: none;
+}

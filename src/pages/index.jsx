@@ -6,6 +6,7 @@ import PageLayout from "../layout/pagelayout";
 import Logo from '../images/logo.png';
 import './main.scss';
 import SocialLinks from "../layout/links";
+import Menu from "../layout/Menu";
 
 // markup
 const IndexPage = () => {
@@ -14,9 +15,9 @@ const IndexPage = () => {
 		<GlobalProvider navOpen={isOpen}>
 			<main className='main'>
 				<SocialLinks />
-				<img src={Logo} className='logo' />
+				<img src={Logo} className='logo' alt='Gaurav Madarkal logo'/>
 				<title>Home Page</title>
-				<Background />
+				<Background setOpen={setIsOpen} />
 				<PageLayout />
 				<Burger openHandler={(open) => setIsOpen(open)} />
 			</main>

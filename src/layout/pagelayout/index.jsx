@@ -9,16 +9,19 @@ import Footer from '../footer';
 
 const PageLayout = () => {
 	const {
-		menuState
+		navOpen,
+		about_ref,
+		projects_ref,
+		history_ref,
+		contact_ref
 	} = useContext(GlobalContext);
-	const [menuOpen, ] = menuState;
 	return (
-		!menuOpen && <div className='content'>
+		!navOpen && <div className='content'>
 			<Hero />
-			<About />
-			<Projects />
-			<History />
-			<Footer />
+			<About ref={about_ref} />
+			<Projects ref={projects_ref}/>
+			<History ref={history_ref}/>
+			<Footer ref={contact_ref}/>
 		</div>
 	);
 };

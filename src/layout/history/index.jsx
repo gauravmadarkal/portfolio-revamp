@@ -23,17 +23,29 @@ const History = () => {
 		}
 	}
     return (
-        <div className='history'>
+        <div className='history' id='history'>
             <p className='title'>
                 History
             </p>
             <div className="history_content">
                 <div className='index_inc'>
-                    <div className={`box ${currentIndex === 1 ? 'disabled' : ''}`} onClick={() => nextP(false)}>
-                        <img src={Arrow} className='inc_icon inv' />
+                    <div 
+                        className={`box ${currentIndex === 1 ? 'disabled' : ''}`} 
+                        onClick={() => nextP(false)}
+                        onKeyDown={() => {}}
+                        role='button'
+                        tabIndex={0}
+                    >
+                        <img src={Arrow} className='inc_icon inv' alt='previous'/>
                     </div>
-                    <div className={`box ${currentIndex === history_count ? 'disabled': ''}`} onClick={() => nextP(true)}>
-                        <img src={Arrow} className='inc_icon' />
+                    <div 
+                        className={`box ${currentIndex === history_count ? 'disabled': ''}`} 
+                        onClick={() => nextP(true)}
+                        onKeyDown={() => {}}
+                        role='button'
+                        tabIndex={0}
+                    >
+                        <img src={Arrow} className='inc_icon' alt='next' />
                     </div>
                 </div>
                 <div className="duration">

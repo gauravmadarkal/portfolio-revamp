@@ -23,6 +23,24 @@
 		-ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
 		-o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
 		transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+
+		.menu_links {
+			position: fixed;
+			top: 40%;
+
+			.lnk {
+				font-size: 2em;
+				font-family: 'moteserrat-bold';
+				color: $bg-color-dark;
+			}
+			.lnk:hover {
+				opacity: 0.5;
+				cursor: pointer;
+			}
+		}
+		.more {
+			top: 50%;
+		}
 	}
 	.open_0 {
 		background-image: 

@@ -26,7 +26,7 @@ export const getIcon = (name) => {
 			return Project2;
 		case 'project_3':
 			return Project3;
-		case 'project_4':
+		default:
 			return Project4;
 	}
 }

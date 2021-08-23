@@ -19,7 +19,13 @@ const Burger = ({
 	};
 
 	return (
-		<div id="nav-icon" onClick={openMenu}>
+		<div 
+			id="nav-icon" 
+			onClick={openMenu}
+			onKeyDown={() => {}}
+			role='button'
+			tabIndex={0}
+		>
 			<span></span>
 			<span></span>
 			<span></span>

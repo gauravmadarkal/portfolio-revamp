@@ -22,6 +22,9 @@ const Button = ({
 						setShowToast(false);
 					}, 3000);
 				}}
+				onKeyDown={() => {}}
+				role='button'
+				tabIndex={0}
 			>
 				{link? 
 					<a className='link_btn' href={link}>{title}</a> : 

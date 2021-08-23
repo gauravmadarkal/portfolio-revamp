@@ -26,7 +26,7 @@ const Projects = () => {
 	}
 
 	return (
-		<div className='projects'>
+		<div className='projects' id='projects'>
 			<p className='title'>
 				Projects
 			</p>
@@ -49,11 +49,23 @@ const Projects = () => {
 				</div>
 			</div>
 			<div className='index_inc'>
-				<div className={`box ${currentIndex === 1 ? 'disabled_box': ''}`} onClick={() => nextProject(false)}>
-					<img src={Arrow} className='inc_icon inv' />
+				<div 
+					className={`box ${currentIndex === 1 ? 'disabled_box': ''}`} 
+					onClick={() => nextProject(false)}
+					onKeyDown={() => {}}
+					role='button'
+					tabIndex={0}
+				>
+					<img src={Arrow} className='inc_icon inv' alt='prev project'/>
 				</div>
-				<div className={`box ${currentIndex === count ? 'disabled_box': ''}`} onClick={() => nextProject(true)}>
-					<img src={Arrow} className='inc_icon' />
+				<div 
+					className={`box ${currentIndex === count ? 'disabled_box': ''}`} 
+					onClick={() => nextProject(true)}
+					onKeyDown={() => {}}
+					role='button'
+					tabIndex={0}
+				>
+					<img src={Arrow} className='inc_icon' alT='NEXT PROJECT'/>
 				</div>
 			</div>
 		</div>
