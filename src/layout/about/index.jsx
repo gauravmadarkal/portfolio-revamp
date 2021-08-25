@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './style.scss';
 import Profile from '../../images/picture.jpg';
 
@@ -11,9 +11,7 @@ const technologies = [
 	'Android',
 	'React Native'
 ]
-const About = ({
-	ref
-}) => {
+const About = forwardRef((props, ref) => {
 	return (
 		<div className='about' id='about' ref={ref}>
 			<p className='title'>About Me</p>
@@ -42,6 +40,6 @@ const About = ({
 			</div>
 		</div>
 	)
-};
+});
 
 export default About;

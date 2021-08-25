@@ -1,27 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.scss';
 
 const Burger = ({
-	openHandler
+	openHandler,
+	isOpen
 }) => {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const openMenu = () => {
-		setIsOpen(!isOpen);
+	useEffect(() => {
+		console.log(isOpen)
 		const ele = document.getElementById('nav-icon');
 		if (isOpen) {
-			openHandler(false);
-			ele?.classList.remove('open');
-		} else {
-			openHandler(true);
 			ele?.classList.add('open');
+		} else {
+			ele?.classList.remove('open');
 		}
-	};
+	}, [isOpen]);
 
 	return (
 		<div 
 			id="nav-icon" 
-			onClick={openMenu}
+			onClick={() => openHandler(!isOpen)}
 			onKeyDown={() => {}}
 			role='button'
 			tabIndex={0}

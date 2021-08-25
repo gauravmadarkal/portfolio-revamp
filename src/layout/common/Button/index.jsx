@@ -16,6 +16,9 @@ const Button = ({
 			<div 
 				className={`button ${theme? 'dark': ''} ${classes}`}
 				onClick={() => {
+					if (link) {
+						window.open(link)
+					}
 					setShowToast(true);
 					clickHandler()
 					setTimeout(() => {
@@ -27,7 +30,7 @@ const Button = ({
 				tabIndex={0}
 			>
 				{link? 
-					<a className='link_btn' href={link}>{title}</a> : 
+					<a className='link_btn' href={link} target='_blank'  rel='noreferrer'>{title}</a> : 
 					title
 				}
 			</div>

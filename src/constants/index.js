@@ -104,3 +104,28 @@ export const getLink = (id) => {
 			return 'https://github.com/gauravmadarkal';
 	}
 };
+
+export const recommendations = [
+	{
+		givenBy: 'Lalit Adithya',
+		content: 'I had the pleasure of working with Gaurav for close to a year at Betsol. He is an extremely talented, pragmatic, and hard-working individual. He can develop extremely innovative and efficient solutions for complex requirements/problems. He has a “never say no attitude” and he implemented efficient solutions to... See more',
+		userDesc: 'Software Engineer at NVIDEA'
+	},
+	{
+		givenBy: 'Shriya Magadal',
+		content: 'I have worked with Gaurav for the past year and a half and in this time I never once seen Gaurav say that something cannot be achieved. He brings an attitude of "never give up" to work. He is very hardworking and always willing to learn. He can understand the people\'s pain points and come up with solutions f... See more',
+		userDesc: 'Engineer - Design and development at Siemens Healthineers'
+	},
+	{
+		givenBy: 'Aarushi Vijay',
+		content: 'Gaurav was more of a team player than an intern. He understood the objectives really well and delivered more than what was expected of him. In his short term here, he gained enough knowledge to attend meetings with clients as well. Quick learner with commitment and reliability.',
+		userDesc: 'Product Manager @ Byjus'
+	},
+	{
+		givenBy: 'Varsha Ravindra',
+		content: 'I\'ve worked with Gaurav at Betsol for more than a year. He is one of the best people to work with. He brings in fun and enthusiasm, along with intelligence, insights and diligence to the team. His ability to take-on and complete any task precisely and way before the deadline is one of the many things about Gaurav ... See more',
+		userDesc: 'Graduate Student at ASU'
+	},
+];
+
+export const write_recommendation_link = 'https://www.linkedin.com/in/gauravmadarkal/detail/recommendation/write/';

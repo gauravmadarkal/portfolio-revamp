@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import './style.scss';
 import Arrow from '../../images/right-arrow.png';
 import { history_info } from '../../constants';
 
 const history_count = 3;
-const History = () => {
+const History = forwardRef((props, ref) => {
     const [currentIndex, setCurrentIndex] = useState(1);
 
 	const nextP = (inc) => {
@@ -23,7 +23,7 @@ const History = () => {
 		}
 	}
     return (
-        <div className='history' id='history'>
+        <div className='history' id='history' ref={ref}>
             <p className='title'>
                 History
             </p>
@@ -61,6 +61,6 @@ const History = () => {
             </div>
         </div>
     )
-};
+});
 
 export default History;

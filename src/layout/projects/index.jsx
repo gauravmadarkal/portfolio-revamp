@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import './style.scss';
 import Button from '../common/Button';
 import { getIcon } from '../../utils';
@@ -6,7 +6,7 @@ import { projects } from '../../constants';
 import Arrow from '../../images/right-arrow.png';
 
 const count = 4;
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
 	const [currentIndex, setCurrentIndex] = useState(1);
 
 	const nextProject = (inc) => {
@@ -26,7 +26,7 @@ const Projects = () => {
 	}
 
 	return (
-		<div className='projects' id='projects'>
+		<div className='projects' id='projects' ref={ref}>
 			<p className='title'>
 				Projects
 			</p>
@@ -70,6 +70,6 @@ const Projects = () => {
 			</div>
 		</div>
 	)
-};
+});
 
 export default Projects;

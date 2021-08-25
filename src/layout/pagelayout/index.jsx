@@ -7,14 +7,16 @@ import Projects from '../projects';
 import History from '../history';
 import Footer from '../footer';
 
-const PageLayout = () => {
+const PageLayout = ({
+	about_ref,
+	projects_ref,
+	history_ref,
+	contact_ref,
+}) => {
 	const {
 		navOpen,
-		about_ref,
-		projects_ref,
-		history_ref,
-		contact_ref
 	} = useContext(GlobalContext);
+
 	return (
 		!navOpen && <div className='content'>
 			<Hero />

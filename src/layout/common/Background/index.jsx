@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import './style.scss';
 import GlobalContext from '../../../context/GlobalContext';
 
-const BGLines = (open, scroll_to) => {
+const BGLines = (open, clickHandler) => {
 	const lines = [];
 	for (let i = 0; i < 6; i += 1) {
 		lines.push(
@@ -10,12 +10,12 @@ const BGLines = (open, scroll_to) => {
 				{
 					open && 
 					(i === 2 ? <div className='menu_links'>
-						<a className='lnk' onClick={() => scroll_to('about')}>- About</a> <br />
-						<a className='lnk' onClick={() => scroll_to('projects')}>- Projects</a>
+						<a className='lnk' onClick={() => clickHandler('about')}>- About</a> <br />
+						<a className='lnk' onClick={() => clickHandler('projects')}>- Projects</a>
 					</div> :
 					i === 3 ? <div className='menu_links more'>
-						<a className='lnk' onClick={() => scroll_to('history')}>- History</a> <br />
-						<a className='lnk' onClick={() => scroll_to('contact')}>- Contact</a>
+						<a className='lnk' onClick={() => clickHandler('history')}>- History</a> <br />
+						<a className='lnk' onClick={() => clickHandler('contact')}>- Contact</a>
 					</div>: '')
 				}
 			</div>
@@ -24,14 +24,11 @@ const BGLines = (open, scroll_to) => {
 	return lines;
 }
 const Background = ({
-	setOpen
+	setOpen,
+	onNav
 }) => {
 	const {
 		navOpen: isOpen,
-		about_ref,
-		projects_ref,
-		history_ref,
-		contact_ref
 	} = useContext(GlobalContext);
 
 	useEffect(() => {
@@ -50,17 +47,9 @@ const Background = ({
 		}
 	}, [isOpen]);
 
-	const scroll_to = (id) => {
-		setOpen(false);
-		switch(id) {
-			case 'about':
-				about_ref?.current?.scrollIntoView();
-		}
-	}
-
 	return (
 		<div className='bg_wrapper'>
-			{BGLines(isOpen, scroll_to)}
+			{BGLines(isOpen, onNav)}
 		</div>
 	)
 };
