@@ -1,0 +1,62 @@
+@import '../../assets/variable.scss';
+
+.recommendations {
+    margin-top: 10rem;
+    .title {
+        font-size: 2em;
+        font-family: 'moteserrat-bold';
+    }
+    .wrapper {
+        display: inline-flex;
+        .quote {
+            width: 5em;
+            height: 4em;
+            margin-right: 2rem;
+            // margin-top: -2rem;
+            align-self: flex-start;
+        }
+        .rec {
+            opacity: 1;
+            transition: opacity 1s ease-in;
+            .seemore {
+                color: $text-color;
+            }
+            .desc {
+                text-align: end;
+                .given_by {
+                    font-family: 'moteserrat-bold';
+                    // text-align: end;
+                }
+                .position {
+                    font-size: 0.8em;
+                }
+            }
+        }
+        .show {
+            opacity: 1;
+        }
+        .hide {
+            opacity: 0;
+        }
+        .inv {
+            transform: rotate(180deg);
+            display: flex;
+            margin-top: 0;
+            // margin-bottom: -2rem;
+            align-self: flex-end;
+            margin-left: 2rem;
+            margin-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: $media-width-sm) {
+    .recommendations {
+        .wrapper {
+            .quote {
+                width: 1.5em;
+                height: 1.5em;
+            }
+        }
+    }
+}

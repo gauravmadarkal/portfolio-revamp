@@ -6,12 +6,14 @@
 		font-size: 3em;
 		font-weight: 600;
 		font-family: 'moteserrat-bold';
+		@include step_appear;
 	}
 	.desc {
 		font-size: 1em;
 		line-height: 2em;
 		font-family: 'moteserrat-light';
 		max-width: 2 * $content-margin;
+		@include step_appear;
 	}
 	.cards {
 		margin-left: 3 * $content-margin;
@@ -25,6 +27,7 @@
 			flex-direction: row;
 			align-items: center;
 			z-index: 8;
+			@include step_appear;
 			.content {
 				color: $bg-color-dark;
 				display: flex;
@@ -64,6 +67,48 @@
 				&:hover {
 					background-color: $button-hover;
 					cursor: pointer;
+				}
+			}
+		}
+		.appear {
+			opacity: 1;
+		}
+	}
+	.appear {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: $media-width-lg) {
+	.hero {
+		padding-top: 4em;
+		.desc {
+			max-width: 100%;
+		}
+		.cards {
+			margin-left: 0;
+			margin-top: 4em;
+		}
+	}
+}
+
+@media only screen and (max-width: $media-width-sm) {
+	.hero {
+		.cards {
+			.card {
+				.content {
+					.text {
+						max-width: 90%;
+					}
+				}
+				.more_info {
+					width: 3em;
+					height: 3em;
+					border-radius: 1.5em;
+					.arrow {
+						width: 1.2em;
+						height: 1.2em;
+					}
 				}
 			}
 		}

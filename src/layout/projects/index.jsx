@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import './style.scss';
 import Button from '../common/Button';
 import { getIcon } from '../../utils';
@@ -24,6 +24,19 @@ const Projects = forwardRef((props, ref) => {
 			}
 		}
 	}
+	useEffect(() => {
+		const ele = document.getElementById('slide1');
+		const ele2 = document.getElementById('slide2');
+		ele.classList.remove('slide_in');
+		ele2.classList.remove('slide_in');
+		// ele.classList.add('slide_in');
+		setTimeout(() => {
+			ele.classList.add('slide_in');
+		}, 500);
+		setTimeout(() => {
+			ele2.classList.add('slide_in');
+		}, 800);
+	}, [currentIndex]);
 
 	return (
 		<div className='projects' id='projects' ref={ref}>
@@ -31,7 +44,7 @@ const Projects = forwardRef((props, ref) => {
 				Projects
 			</p>
 			<div className='row'>
-				<div className='col bg-y'>
+				<div className='col bg-y' id='slide1'>
 					<p className='project_title'>
 						{projects[currentIndex - 1]?.title}
 					</p>
@@ -40,7 +53,7 @@ const Projects = forwardRef((props, ref) => {
 					</p>
 					<Button title='Learn More' theme='dark' classes='moreinfo' link={projects[currentIndex - 1]?.link}/>
 				</div>
-				<div className="col bg-l">
+				<div className="col bg-l" id='slide2'>
 					<img
 						src={getIcon(`project_${currentIndex}`)} 
 						alt='tech Stack icon' 

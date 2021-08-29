@@ -1,15 +1,18 @@
 import React, { useContext, useEffect } from 'react';
 import './style.scss';
 import GlobalContext from '../../../context/GlobalContext';
+import { useMediaQuery } from '@react-hook/media-query';
 
 const BGLines = (open, clickHandler) => {
+	const isTabletMode = useMediaQuery('only screen and (max-width: 768px)');
+	const noLines = isTabletMode ? 3 : 6;
 	const lines = [];
-	for (let i = 0; i < 6; i += 1) {
+	for (let i = 0; i < noLines; i += 1) {
 		lines.push(
 			<div className='grid_item' id='bg_strips'>
 				{
-					open && 
-					(i === 2 ? <div className='menu_links'>
+					open && !isTabletMode && 
+					( i === 2 ? <div className='menu_links'>
 						<a className='lnk' onClick={() => clickHandler('about')}>- About</a> <br />
 						<a className='lnk' onClick={() => clickHandler('projects')}>- Projects</a>
 					</div> :
@@ -17,6 +20,17 @@ const BGLines = (open, clickHandler) => {
 						<a className='lnk' onClick={() => clickHandler('history')}>- History</a> <br />
 						<a className='lnk' onClick={() => clickHandler('contact')}>- Contact</a>
 					</div>: '')
+				}
+				{
+					open && isTabletMode && 
+					(
+						i === 1 ? <div className='menu_links'>
+							<a className='lnk' onClick={() => clickHandler('about')}>- About</a> <br /><br />
+							<a className='lnk' onClick={() => clickHandler('projects')}>- Projects</a><br /><br />
+							<a className='lnk' onClick={() => clickHandler('history')}>- History</a> <br /><br />
+							<a className='lnk' onClick={() => clickHandler('contact')}>- Contact</a>
+						</div> : ''
+					)
 				}
 			</div>
 		);

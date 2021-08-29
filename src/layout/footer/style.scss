@@ -1,3 +1,5 @@
+@import '../../assets/variable.scss';
+
 .footer {
     .title {
         font-weight: bold;
@@ -7,5 +9,13 @@
     .end {
         margin-top: 5em;
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: $media-width-sm) {
+    .footer {
+        .end {
+            margin-top: 1em;
+        }
     }
 }

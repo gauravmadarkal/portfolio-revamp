@@ -74,3 +74,13 @@
 	width: 0%;
 	left: 50%;
 }
+.gone {
+	opacity: 0;
+}
+
+@media only screen and (max-width: $media-width-sm) {
+	#nav-icon {
+		margin-top: 30px;
+		right: $content-margin-sm;
+	}
+}

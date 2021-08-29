@@ -1,4 +1,9 @@
 $max-screen-width: 1900px;
+$media-width-sm: 26em; // 425px
+$media-width-md: 48em; // 768px
+$media-width-lg: 62em; // 992px
+$media-width-xl: 75em; //1200px
+
 
 // $bg-color-light: #F2EBE6;
 $bg-color-light: #E6E6E6;
@@ -14,6 +19,8 @@ $button-hover: #ffe0b2;
 $matt-color: #fff3e0;
 
 $content-margin: 16.6%;
+$content-margin-sm: 8%;
+
 $plain-white: #fff;
 
 @mixin paint_color($timing) {
@@ -27,4 +34,9 @@ $plain-white: #fff;
 
 @mixin button_effect {
 	transition: background-color 500ms ease-in;
+}
+
+@mixin step_appear {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
 }

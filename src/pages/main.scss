@@ -15,10 +15,11 @@ body {
 	position: fixed;
 	left: $content-margin;
 	top: 0;
-	margin: 20px 0;
+	margin: 10px 0;
 	width: 100px;
 	height: 100px;
 	z-index: 10;
+	transition: opacity 300ms ease-in-out;
 }
 
 .content {
@@ -33,4 +34,26 @@ body {
 .hide {
 	opacity: 0;
 	z-index: 1;
+}
+
+.appear {
+	opacity: 1;
+}
+
+.gone {
+	opacity: 0;
+}
+
+@media only screen and (max-width: $media-width-sm) {
+	.logo {
+		width: 70px;
+		height: 70px;
+		left: $content-margin-sm;
+	}
+	.invisible {
+		visibility: hidden;
+	}
+	.content {
+		margin: 0 $content-margin-sm;
+	}
 }

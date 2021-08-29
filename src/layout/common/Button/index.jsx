@@ -7,20 +7,23 @@ const Button = ({
 	theme,
 	classes,
 	link,
-	toast
+	toast,
+	id
 }) => {
 	const [showToast, setShowToast] = useState(false);
 
 	return (
-		<div className='button_wrapper'>
+		<div className={`button_wrapper ${id? 'anim': ''}`} id={id}>
 			<div 
 				className={`button ${theme? 'dark': ''} ${classes}`}
 				onClick={() => {
 					if (link) {
 						window.open(link)
 					}
+					else {
+						clickHandler()
+					}
 					setShowToast(true);
-					clickHandler()
 					setTimeout(() => {
 						setShowToast(false);
 					}, 3000);

@@ -6,9 +6,9 @@ import Github from '../../images/icons/github.png';
 import Instagram from '../../images/icons/instagram.png';
 import { getLink } from "../../constants";
 
-const SocialLinks = () => {
+const SocialLinks = ({ classn }) => {
     return (
-        <div className='social_icons'>
+        <div className={`${classn} social_icons`}>
             <a className='icon_link' href={getLink('facebook')} target='_blank' rel='noreferrer'>
                 <img src={Facebook} className='icon' alt='social icon' />
             </a>

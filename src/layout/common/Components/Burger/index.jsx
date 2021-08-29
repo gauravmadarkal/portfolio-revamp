@@ -3,7 +3,8 @@ import './style.scss';
 
 const Burger = ({
 	openHandler,
-	isOpen
+	isOpen,
+	showHeader
 }) => {
 	useEffect(() => {
 		console.log(isOpen)
@@ -22,6 +23,7 @@ const Burger = ({
 			onKeyDown={() => {}}
 			role='button'
 			tabIndex={0}
+			className={`${showHeader? '' : 'hide'}`}
 		>
 			<span></span>
 			<span></span>

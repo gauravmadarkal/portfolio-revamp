@@ -1,6 +1,7 @@
 @import '../../assets/variable.scss';
 
 .projects {
+	overflow: hidden;
 	.title {
 		font-family: 'moteserrat-bold';
 		font-size: 2em;
@@ -9,12 +10,16 @@
 	.row {
 		display: flex;
 		flex-direction: row;
+		overflow: hidden;
 
 		.col {
 			width: 50%;
 			max-height: 25em;
 			display: flex;
 			flex-direction: column;
+			transform: translateX(-200%);
+			transition: transform 1s ease-in-out;
+			overflow: hidden;
 			// padding-left: 2em;
 
 			.project_title {
@@ -35,6 +40,8 @@
 		}
 		.bg-y {
 			background-color: $button-hover;
+			overflow: hidden;
+			z-index: 5;
 		}
 		.bg-l {
 			background-color: white;
@@ -42,6 +49,8 @@
 			align-items: center;
 			object-fit: cover;
 			padding: 0;
+			overflow: hidden;
+			z-index: 3;
 
 			.tech_icon {
 				width: 20em;
@@ -50,6 +59,9 @@
 			.inc_size {
 				width: 30em;
 			}
+		}
+		.slide_in {
+			transform: translateX(0);
 		}
 	}
 	.index_inc {
@@ -84,4 +96,29 @@
 			opacity: 0.1;
 		}
 	}
+}
+
+@media only screen and (max-width: $media-width-md) {
+	.projects {
+		.row {
+			flex-direction: column;
+			.col {
+				width: 100%;
+				max-height: 27em;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $media-width-sm) {
+	.projects {
+		.row {
+			.col {
+				max-height: max-content;
+			}
+			.bg-l {
+				display: none;
+			}
+		}
+	}	
 }

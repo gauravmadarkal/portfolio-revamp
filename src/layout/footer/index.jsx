@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import Button from '../common/Button';
+import SocialLinks from '../links';
 import './style.scss';
 
 const Footer = forwardRef((props, ref) => {
@@ -17,6 +18,7 @@ const Footer = forwardRef((props, ref) => {
                 link='mailto: gauravmadarkal@gmail.com'
                 toast='Email-id copied to clipboard!!'
             />
+            <SocialLinks classn='icons' />
             <p className='end'>Designed and developed by Gaurav Madarkal</p>
         </div>
     )

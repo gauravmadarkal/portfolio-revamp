@@ -82,3 +82,21 @@
 .invert {
 	background-color: $lines-color-light;
 }
+
+@media only screen and (max-width: $media-width-md) {
+	.bg_wrapper {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.bg_wrapper {
+		.grid_item {
+			.menu_links {
+				.lnk {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+}
