@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "portfolio-gaurav",
+    siteUrl: "https://www.gauravmadarkal.com",
+    title: "Gaurav Madarkal | Full Stack Developer",
+    author: 'Gaurav Madarkal'
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -10,7 +11,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-01NEW3Q4J7",
+        trackingId: "G-ELPK1GCCDT",
       },
     },
     "gatsby-plugin-react-helmet",
@@ -18,7 +19,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "./src/images/logo.png"
       },
     },
     "gatsby-plugin-sharp",

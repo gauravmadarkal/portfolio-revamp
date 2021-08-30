@@ -9,7 +9,9 @@ const useCustomEffects = (id, count) => {
 			ele.classList.add('appear')
 		}
 		if (x === count) {
-			window.clearInterval(intId)
+			if (typeof window !== undefined) {
+				window.clearInterval(intId)
+			}
 		}
 		x += 1;
 	}, 500);

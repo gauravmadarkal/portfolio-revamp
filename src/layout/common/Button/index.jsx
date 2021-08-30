@@ -18,7 +18,7 @@ const Button = ({
 				className={`button ${theme? 'dark': ''} ${classes}`}
 				onClick={() => {
 					if (link) {
-						window.open(link)
+						typeof window !== undefined && window.open(link)
 					}
 					else {
 						clickHandler()
