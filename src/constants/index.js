@@ -2,6 +2,14 @@ import React from 'react';
 
 export const projects = [
 	{
+		title: 'Scalable Order Management System',
+		desc: `Objective of this project is to build an efficient and scalable order management \
+		system with kubernetes, which can handle great amount of traffic to create, package, dispatch, \
+		route and deliver orders. This project simulates the applications used by OMS giants \
+		such as Fedex, Amazon, UPS etc..`,
+		link: 'https://www.youtube.com/watch?v=GRlodJyTv5M'
+	},
+	{
 		title: 'Analytics - Alcohol Sales vs DUI Reports',
 		desc: `Analysis raw data over a period of 5 years to see if the
 		alcohol sales in any way is related to the Driving Under the influence accident reports.
